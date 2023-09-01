@@ -92,6 +92,12 @@ Compile in root directory:
 make -f Makefile.unix bindir all
 ```
 
+Run game:
+
+```
+./objs/blackshades
+```
+
 ### OSX (not tested yet)
 
 Use homebrew (http://mxcl.github.com/homebrew/) to install alut & sdl_image
