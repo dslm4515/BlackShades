@@ -762,10 +762,12 @@ int Game::DrawGLScene(void)
 			
 
 			if(environment==sunny_environment){
+				// convert variable first
+				GLfloat SELDfogcolorr = fogcolorr * 1.6 ;
 
 				GLfloat LightAmbient[]=	{ fogcolorr/4, fogcolorg/4, fogcolorb/4, 1.0f};
 
-				GLfloat LightDiffuse[]=	{ fogcolorr*1.6, fogcolorg*1.6, fogcolorr*1.6, 1.0f };
+				GLfloat LightDiffuse[]=	{ SELDfogcolorr, SELDfogcolorr, SELDfogcolorr, 1.0f };
 
 				glLightfv(GL_LIGHT0, GL_AMBIENT, LightAmbient);		
 
@@ -774,10 +776,12 @@ int Game::DrawGLScene(void)
 			}
 
 			if(environment!=sunny_environment){
+				// convert variables first
+				GLfloat SEfogcolorr = fogcolorr * .8 ;
 
-				GLfloat LightAmbient[]=	{ fogcolorr*.8, fogcolorg*.8, fogcolorb*.8, 1.0f};
+				GLfloat LightAmbient[]=	{ SEfogcolorr, SEfogcolorr, SEfogcolorr, 1.0f};
 
-				GLfloat LightDiffuse[]=	{ fogcolorr*.8, fogcolorg*.8, fogcolorr*.8, 1.0f };
+				GLfloat LightDiffuse[]=	{ SEfogcolorr, SEfogcolorr, SEfogcolorr, 1.0f };
 
 				glLightfv(GL_LIGHT0, GL_AMBIENT, LightAmbient);		
 
@@ -809,7 +813,9 @@ int Game::DrawGLScene(void)
 
 			GLfloat LightAmbient[]=		{ 0, 0, 0, 1.0f};
 
-			GLfloat LightDiffuse[]=		{ .1+sinefluct/5, 0, 0, 1.0f };
+			// Convert variable first
+			GLfloat SF_val = .1+sinefluct/5 ;
+			GLfloat LightDiffuse[]=		{ SF_val, 0, 0, 1.0f };
 
 			
 
