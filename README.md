@@ -90,10 +90,12 @@ Currently, source has been tested to build on Unix-like systems. No testing done
 
 Currently, compiling with clang produces no errors, but not with GCC.
 
+Building on Linux with clang will be the default until GCC is supported.
+
 Compile in root directory:
 
 ```
-make -f Makefile.unix.clang bindir all
+make 
 ```
 
 Run game:

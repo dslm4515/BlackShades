@@ -8,7 +8,7 @@ EXE := $(BINDIR)/blackshades
 
 CFLAGS := -O2 -Wall -g $(shell sdl-config --cflags) -I$(SRCDIR) -include Source/Support.h
 CXXFLAGS := $(CFLAGS)
-LDFLAGS := $(shell sdl-config --libs) -lGL -lGLU -lalut -lopenal -lSDL_image
+LDFLAGS := $(shell sdl-config --libs) -lGL -lGLU -lopenal -lalut -lSDL_image 
 
 # Don't want ogg?
 #CFLAGS += -DNOOGG
@@ -81,5 +81,4 @@ clean:
 	rm -rf $(BINDIR)
 
 # end of Makefile.
-
 
