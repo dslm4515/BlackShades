@@ -762,10 +762,13 @@ int Game::DrawGLScene(void)
 			
 
 			if(environment==sunny_environment){
+				// Cannot store doubles in  GLfloat list
+				// convert vriable first
+				GLfloat GLF_fogcolorr = fogcolorr*1.6 ;
 
 				GLfloat LightAmbient[]=	{ fogcolorr/4, fogcolorg/4, fogcolorb/4, 1.0f};
 
-				GLfloat LightDiffuse[]=	{ fogcolorr*1.6, fogcolorg*1.6, fogcolorr*1.6, 1.0f };
+				GLfloat LightDiffuse[]=	{ GLF_fogcolorr, GLF_fogcolorr, GLF_fogcolorr, 1.0f };
 
 				glLightfv(GL_LIGHT0, GL_AMBIENT, LightAmbient);		
 
@@ -774,10 +777,13 @@ int Game::DrawGLScene(void)
 			}
 
 			if(environment!=sunny_environment){
+				// Cannot store doubles in  GLfloat list
+				// convert vriable first
+				GLfloat GLF_fogcolorr = fogcolorr*.8 ;
 
-				GLfloat LightAmbient[]=	{ fogcolorr*.8, fogcolorg*.8, fogcolorb*.8, 1.0f};
+				GLfloat LightAmbient[]=	{ GLF_fogcolorr, GLF_fogcolorr, GLF_fogcolorr, 1.0f};
 
-				GLfloat LightDiffuse[]=	{ fogcolorr*.8, fogcolorg*.8, fogcolorr*.8, 1.0f };
+				GLfloat LightDiffuse[]=	{ GLF_fogcolorr, GLF_fogcolorr, GLF_fogcolorr, 1.0f };
 
 				glLightfv(GL_LIGHT0, GL_AMBIENT, LightAmbient);		
 
@@ -806,10 +812,13 @@ int Game::DrawGLScene(void)
 		if(visions==1){
 
 			//light
+			// Cannot store double in a GLfloat list
+			// Store value as a GLfloat first
+			GLfloat SF_val = .1+sinefluct/5 ;
 
 			GLfloat LightAmbient[]=		{ 0, 0, 0, 1.0f};
 
-			GLfloat LightDiffuse[]=		{ .1+sinefluct/5, 0, 0, 1.0f };
+			GLfloat LightDiffuse[]=		{ SF_val, 0, 0, 1.0f };
 
 			
 
