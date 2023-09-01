@@ -86,10 +86,12 @@ Currently, source has been tested to build on Unix-like systems. No testing done
 
 ### Linux/Unix-like
 
+Currently, compiling with clang produces no errors, but not with GCC.
+
 Compile in root directory:
 
 ```
-make -f Makefile.unix bindir all
+make -f Makefile.unix.clang bindir all
 ```
 
 Run game:
