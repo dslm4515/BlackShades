@@ -89,7 +89,7 @@ Currently, source has been tested to build on Unix-like systems. No testing done
 Compile in root directory:
 
 ```
-make -f Makefile.unix
+make -f Makefile.unix bindir all
 ```
 
 ### OSX (not tested yet)
