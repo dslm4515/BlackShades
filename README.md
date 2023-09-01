@@ -29,9 +29,11 @@ You can edit levels by setting "Custom levels" to 1 in the config and editing th
 
 keys for debug mode:
 
-tab = 3rdperson toggle
-f = Force Pushª :)
-shift-x = switch weapons
+<ul>
+ <li>tab = 3rdperson toggle </li>
+ <li>f = Force Pushª :) </li>
+ <li>shift-x = switch weapons </li>
+</ul>
 
 ### Scoring
 The scoring system consists of:
